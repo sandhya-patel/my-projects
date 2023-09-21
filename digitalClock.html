@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+           
+        }
+        body{
+            background-image: url('image//bg2.jpg')  ;
+            width: 100%px;
+
+            height: 700px;
+
+        }
+        .time{
+            font-size: 55px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align:center ;
+            margin-top: 200px;
+         
+          
+        }
+    
+        
+        i{
+            
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          margin-top: 400px !important;
+            margin-left: 620px;
+           
+            color: rgb(58, 58, 58);
+        }
+        .new{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 5px;
+        }
+        .hr{
+            
+            margin-left: 300px;
+            margin-right: 300px;
+            color: #000 !important;
+        }
+        
+          </style>
+</head>
+<body>
+    <i  id="clock"   >Digital clock</i> 
+     <br>
+<div id="bi"  class="time">
+  
+
+
+   
+</div >
+<br>
+<div class="new">
+<div style="margin-right: 40px;">
+    hours 
+</div>
+<div style="margin-left: 5px;">
+    minutes 
+</div>
+<div style="margin-left: 40px;">
+    seconds
+</div>
+
+</div>
+<br><br>
+<hr class="hr" >
+
+<script>
+     
+
+    setInterval(()=>{
+        let a= new Date();
+        let h= a.getHours();
+        let m= a.getMinutes();
+        let s= a.getSeconds();
+      bi.innerHTML= (h+ "  :  " +m+"  :  "+s)
+     
+
+    },1000)
+</script>
+</body>
+</html>
