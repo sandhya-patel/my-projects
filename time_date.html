@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock!</title>
+    <style>
+        *{
+            background-color: rgb(245, 225, 112);
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 400px;
+           
+            background-color: rgb(245, 225, 112);
+            /* margin-left: 500px; */
+            border-radius: 50%;
+           
+        }
+        .new{
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+            width: 600px;
+            height: 600px;
+           
+            background-color: rgb(19, 23, 18);
+            margin-left: 400px;
+          
+           
+        }
+        .new1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            
+            background-color: rgb(19, 23, 18);
+           
+          
+           
+        }
+        button{
+       cursor: pointer;
+       padding: 5px 5px 5px 5px;
+       color: black;
+       background-color: rgb(243, 243, 247);
+       border-radius: 20%;
+       font-size: 25px;
+    
+       
+}
+.btn1{
+    margin-left: 10px;
+}
+
+.clock{
+    display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            font-size: 35px;
+
+}
+
+.clock1{
+    display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            font-size: 35px;
+
+}
+/* b{
+    
+    transition: 0.5s ease;
+    
+} 
+     */
+
+b:hover{
+   
+    color: rgb(251, 246, 246);
+
+}
+
+
+    </style>
+</head>
+<body>
+    <i class="clock"> made in india <b>&hearts;</b></i>
+    <div class="new">
+    <div>
+       <div class="new1">
+
+       <button  class="btn" onclick="alert( h +':'+ m +':'+s  )" id="time">time</button> <br>
+       <button class="btn1" onclick="alert(d +'/'+ mo +'/'+y)" >date</button> <br> <br>
+      
+    </div>
+    </div>
+   
+    <i class=" clock1" >HINDUSTAAN <br>  <br><b> &hearts;</b>.............<b>&hearts;</b></i>
+</div>
+
+    <script>
+          let a= new Date();
+        let h= a.getHours();
+        let m= a.getMinutes();
+        let s= a.getSeconds();
+        let d= a.getDate();
+        let y= a.getFullYear();
+        let mo= a.getMonth();
+
+        // console.log( h +":"+ m +":"+s +"   "+ d +"/"+mo+"/"+y )
+
+        
+       
+    </script>
+</body>
+</html>
