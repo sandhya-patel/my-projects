@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div id="text-to-speech">
+       
+    <title>Document</title>
+    <style>
+        .add{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+.add h1{
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+
+}
+.add h1 span{
+    color : #ff2963
+}
+textarea{
+    width: 600px;
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+    resize: none;
+    margin-bottom: 30px;
+}
+textarea::placeholder{
+    font-size: 16px;
+    color: #ddd;
+    
+}
+ 
+.row{
+    width: 600px;
+    display:flex;
+    align-items: center;
+    gap : 20px
+
+}
+
+button{
+    background : #ff2963;
+color: #fff;
+font-size: 16px;
+padding: 10px 30px;
+border-radius: 35px;
+border: 0;
+outline: 0;
+cursor: pointer;
+display: flex;
+align-items: center;
+margin-left: 250px;
+
+}
+button img{
+    width: 16px;
+    margin-right: 10px;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="add">
+    <div id="text-to-speech">
+        <h1>Text to Speech <span>Converter...</span></h1>
+        <textarea id="text" placeholder="Write anything here..."></textarea>
+        <div class="row">
+          
+        <button id="speak-button" > Speak</button>
+    </div>
+      </div>
+    </div>
+    <script >
+        let textArea = document.getElementById("text");
+let speakButton = document.getElementById("speak-button");
+
+
+speakButton.addEventListener("click", function() {
+
+  let text = textArea.value;
+
+
+  let utterance = new SpeechSynthesisUtterance();
+
+  utterance.text = text;
+  utterance.voice = window.speechSynthesis.getVoices()[0];
+  window.speechSynthesis.speak(utterance);
+});
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
